@@ -31,7 +31,9 @@ function browserSync(done) {
     server: {
       baseDir: "./"
     },
-    port: 8282
+    port: 8282,
+    open: false,
+    notify: false
   });
   done();
 }
