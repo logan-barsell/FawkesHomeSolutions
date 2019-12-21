@@ -80,9 +80,9 @@
     }
     console.log(mainNavbar)
     if(mainNavbar > 2923) {
-      $('body').css('background-color','white')
+      $('.bg-houses').css('background','none')
     } else {
-      $('body').css('background-color','none')
+      $('.bg-houses').css('background','background: url("../img/bg-masthead.jpg") center center;')
     }
   })
 
