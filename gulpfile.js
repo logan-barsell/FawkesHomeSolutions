@@ -33,7 +33,8 @@ function browserSync(done) {
     },
     port: 8282,
     open: false,
-    notify: false
+    notify: false,
+    ghostMode: false
   });
   done();
 }
