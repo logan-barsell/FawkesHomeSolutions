@@ -5,6 +5,7 @@
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
+    "script": "node_modules/.bin/gulp",
     "description": "Creative is a stylish one page HTML theme for Bootstrap.",
     "keywords": [
         "css",

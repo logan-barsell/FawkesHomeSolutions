@@ -78,12 +78,6 @@
       $('header.masthead').removeClass('bottom')
       $('.bg-houses').addClass('bottom')
     }
-    console.log(mainNavbar)
-    if(mainNavbar > 2923) {
-      $('.bg-houses').css('background','none')
-    } else {
-      $('.bg-houses').css('background','background: url("../img/bg-masthead.jpg") center center;')
-    }
   })
 
 })(jQuery); // End of use strict
