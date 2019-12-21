@@ -78,6 +78,12 @@
       $('header.masthead').removeClass('bottom')
       $('.bg-houses').addClass('bottom')
     }
+    console.log(mainNavbar)
+    if(mainNavbar > 2923) {
+      $('body').css('background-color','white')
+    } else {
+      $('body').css('background-color','none')
+    }
   })
 
 })(jQuery); // End of use strict
