@@ -10049,6 +10049,14 @@ hr.light {
   font-weight: bold;
 }
 
+#services {
+  background-color: white;
+}
+
+#contact {
+  background-color: white;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -10126,15 +10134,10 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.4)), to(rgba(92, 77, 66, 0.4))), url("../img/bg-masthead.jpg");
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url("../img/bg-masthead.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.4)), to(rgba(92, 77, 66, 0.4)));
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%);
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 }
 
 header.masthead h1 {
@@ -10160,6 +10163,25 @@ header.masthead h1 {
   header.masthead h1 {
     font-size: 3.5rem;
   }
+}
+
+header.masthead:after {
+  content: "";
+  position: fixed;
+  /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh;
+  /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* needed to keep in the background */
+  background: url("../img/bg-masthead.jpg") center center;
+  background-size: cover;
+}
+
+header.masthead.bottom:after {
+  z-index: -2;
 }
 
 #portfolio .container-fluid {
@@ -10210,8 +10232,25 @@ header.masthead h1 {
 }
 
 .bg-houses {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.7)), to(rgba(92, 77, 66, 0.7))), url("../img/bg-secondary.jpg");
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.7) 100%), url("../img/bg-secondary.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.7)), to(rgba(92, 77, 66, 0.7)));
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.7) 100%);
+}
+
+.bg-houses:after {
+  content: "";
+  position: fixed;
+  /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh;
+  /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* needed to keep in the background */
+  background: url("../img/bg-secondary.jpg") center center;
   background-size: cover;
-  background-attachment: fixed;
+}
+
+.bg-houses.bottom:after {
+  z-index: -2;
 }

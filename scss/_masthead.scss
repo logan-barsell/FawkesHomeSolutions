@@ -4,14 +4,10 @@ header.masthead {
   padding-bottom: calc(10rem - #{$navbar-height});
   // replace the masthead.jpg image in the /img directory to change the image
   // if the image name change, make sure to update the url path below!
-  background: linear-gradient(to bottom, #{fade-out($brown, .6)} 0%,#{fade-out($brown, .6)} 100%), url('../img/bg-masthead.jpg');
+  background: linear-gradient(to bottom, #{fade-out($brown, .6)} 0%,#{fade-out($brown, .6)} 100%), ;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
   h1 {
     font-size: 2.25rem;
   }
@@ -33,3 +29,23 @@ header.masthead {
     }
   }
 }
+
+header.masthead:after{
+      content:"";
+      position:fixed; /* stretch a fixed position to the whole screen */
+      top:0;
+      height:100vh; /* fix for mobile browser address bar appearing disappearing */
+      left:0;
+      right:0;
+      z-index:-1; /* needed to keep in the background */
+      background: url('../img/bg-masthead.jpg') center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+header.masthead.bottom:after {
+  z-index: -2;
+}
+
