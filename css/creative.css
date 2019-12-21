@@ -10117,6 +10117,12 @@ hr.light {
   }
 }
 
+@media only screen and (max-width: 338px) {
+  .navbar-brand {
+    font-size: 17px;
+  }
+}
+
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
@@ -10126,6 +10132,9 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 header.masthead h1 {
