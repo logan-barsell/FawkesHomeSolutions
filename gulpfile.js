@@ -33,9 +33,9 @@ function browserSync(done) {
     },
     port: 8282,
     ghostMode: {
-      clicks: false,
-      forms: false,
-      scroll: false
+      clicks: true,
+      forms: true,
+      scroll: true
     },
     open: false,
     notify: false
