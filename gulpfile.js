@@ -32,7 +32,11 @@ function browserSync(done) {
       baseDir: "./"
     },
     port: 8282,
-    ghostMode: false,
+    ghostMode: {
+      clicks: false,
+      forms: false,
+      scroll: false
+    },
     open: false,
     notify: false
 
