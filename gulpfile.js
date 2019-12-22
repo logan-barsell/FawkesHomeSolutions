@@ -28,15 +28,11 @@ const banner = ['/*!\n',
 // BrowserSync
 function browserSync(done) {
   browsersync.init({
+    ghostMode: false,
     server: {
       baseDir: "./"
     },
     port: 8282,
-    ghostMode: {
-      clicks: true,
-      forms: true,
-      scroll: true
-    },
     open: false,
     notify: false
 
