@@ -34,8 +34,8 @@ function browserSync(done) {
     },
     port: 8282,
     open: false,
-    notify: false
-
+    notify: false,
+    ui: {port:8383}
   });
   done();
 }
