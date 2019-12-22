@@ -32,9 +32,10 @@ function browserSync(done) {
       baseDir: "./"
     },
     port: 8282,
+    ghostMode: false,
     open: false,
-    notify: false,
-    ghostMode: false
+    notify: false
+
   });
   done();
 }
