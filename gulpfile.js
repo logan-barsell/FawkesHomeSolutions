@@ -33,7 +33,7 @@ function browserSync(done) {
       baseDir: "./"
     },
     port: 8282,
-    open: false,
+    open: "ui",
     notify: false,
     ui: {port:8383}
   });
