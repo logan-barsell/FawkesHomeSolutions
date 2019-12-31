@@ -34,7 +34,7 @@
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - 45)
+          scrollTop: (target.offset().top - 30)
         }, 1000, "easeInOutExpo");
         return false;
       }
@@ -69,7 +69,9 @@
  
   $(window).scroll( function() {
     var mainNavbar = $('#mainNav').offset().top
-    if (mainNavbar > 700) {
+    console.log(mainNavbar)
+
+    if (mainNavbar > 1357) {
       $('header.masthead').addClass('bottom')
       $('.bg-houses').removeClass('bottom')
       
