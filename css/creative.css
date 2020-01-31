@@ -10064,9 +10064,8 @@ footer {
 #overscroll-bg {
   position: fixed;
   bottom: 0;
-  height: 500px;
+  height: 0px;
   background-color: white;
-  visibility: hidden;
   z-index: -1;
   width: 100%;
 }

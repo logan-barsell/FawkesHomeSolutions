@@ -82,10 +82,10 @@
     }
 
     if (mainNavbar > 3245) {
-      $('#overscroll-bg').css('visibility', 'visible')
+      $('#overscroll-bg').css('height', '500px')
     }
     else {
-      $('#overscroll-bg').css('visibility', 'hidden')
+      $('#overscroll-bg').css('height', '0px')
     }
   })
 
