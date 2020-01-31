@@ -10061,6 +10061,16 @@ footer {
   margin-top: -1px;
 }
 
+#overscroll-bg {
+  position: fixed;
+  bottom: 0;
+  height: 500px;
+  background-color: white;
+  visibility: hidden;
+  z-index: -1;
+  width: 100%;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -10182,8 +10192,6 @@ header.masthead:after {
   /* needed to keep in the background */
   background: url("../img/bg-masthead.jpg") center center;
   background-size: cover;
-  -ms-scroll-chaining: none;
-  overscroll-behavior: none;
 }
 
 header.masthead.bottom:after {
@@ -10255,8 +10263,6 @@ header.masthead.bottom:after {
   /* needed to keep in the background */
   background: url("../img/bg-secondary.jpg") center center;
   background-size: cover;
-  -ms-scroll-chaining: none;
-  overscroll-behavior: none;
 }
 
 .bg-houses.bottom:after {

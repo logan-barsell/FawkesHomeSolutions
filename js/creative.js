@@ -80,6 +80,13 @@
       $('header.masthead').removeClass('bottom')
       $('.bg-houses').addClass('bottom')
     }
+
+    if (mainNavbar > 3245) {
+      $('#overscroll-bg').css('visibility', 'visible')
+    }
+    else {
+      $('#overscroll-bg').css('visibility', 'hidden')
+    }
   })
 
 })(jQuery); // End of use strict

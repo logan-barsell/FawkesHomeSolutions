@@ -59,3 +59,14 @@ footer {
   margin-top: -1px;
 }
 
+#overscroll-bg {
+  position: fixed;
+  bottom: 0;
+  height: 500px;
+  background-color: white;
+  visibility: hidden;
+  z-index: -1;
+  width: 100%;
+}
+
+
