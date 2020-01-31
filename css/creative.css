@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Creative v5.1.8 (https://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2019 Start Bootstrap
+ * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
 
@@ -10057,6 +10057,10 @@ hr.light {
   background-color: white;
 }
 
+footer {
+  margin-top: -1px;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -10178,6 +10182,8 @@ header.masthead:after {
   /* needed to keep in the background */
   background: url("../img/bg-masthead.jpg") center center;
   background-size: cover;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
 }
 
 header.masthead.bottom:after {
@@ -10249,6 +10255,8 @@ header.masthead.bottom:after {
   /* needed to keep in the background */
   background: url("../img/bg-secondary.jpg") center center;
   background-size: cover;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
 }
 
 .bg-houses.bottom:after {
