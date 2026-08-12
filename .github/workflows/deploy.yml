@@ -1,0 +1,45 @@
+name: Deploy FawkesHomeSolutions
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DROPLET_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${{ secrets.DROPLET_SSH_PORT || 22 }}" -H "${{ secrets.DROPLET_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Ensure document root exists
+        run: |
+          ssh -p "${{ secrets.DROPLET_SSH_PORT || 22 }}" \
+            -i ~/.ssh/id_ed25519 \
+            -o StrictHostKeyChecking=yes \
+            "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" \
+            'mkdir -p /var/www/fawkeshomesolutions.com/public'
+
+      - name: Rsync static site
+        run: |
+          rsync -avz --delete \
+            -e "ssh -p ${{ secrets.DROPLET_SSH_PORT || 22 }} -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'node_modules' \
+            --exclude 'scss' \
+            --exclude 'gulpfile.js' \
+            --exclude 'package.json' \
+            --exclude 'package-lock.json' \
+            --exclude 'README.md' \
+            --exclude 'LICENSE' \
+            --exclude '.DS_Store' \
+            --exclude '.gitignore' \
+            ./ "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}:/var/www/fawkeshomesolutions.com/public/"
